@@ -7,12 +7,7 @@ python:
   - 3.7
 services:
   - docker
-branches:
-  only:
-  - master
 install:
   - bash install.sh
 script:
   - bash wrapper.sh all
-after_script:
-  - rm creds.ini apikey
