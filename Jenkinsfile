@@ -1,4 +1,4 @@
-node(){
+node('master'){
   stages {
    
     stage('pull data'){
