@@ -8,6 +8,6 @@ python:
 services:
   - docker
 install:
-  - bash install.sh
+  - python jame.py
 script:
-  - bash wrapper.sh all
+  - echo "hello"
