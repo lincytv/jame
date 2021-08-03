@@ -1,6 +1,18 @@
+# -*- mode:yaml; coding: utf-8 -*-
 language: python
+cache: pip
+sudo: required
+dist: xenial
 python:
   - 3.7
+services:
+  - docker
+branches:
+  only:
+  - master
 install:
-  - pip
-  
+  - bash install.sh
+script:
+  - bash wrapper.sh all
+after_script:
+  - rm creds.ini apikey
